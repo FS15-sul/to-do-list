@@ -15,31 +15,72 @@
         </div>
     </header>
     <main>
-        <h3>Minhas Tarefas</h3>
+        <h3>
+            Minhas Tarefas
+            <button onclick="novaTarefa()">Nova Tarefa</button>
+        </h3>
         <ul>
             <li>
-                <h5>Pendurar quadro</h5>
-                <p>Furar dois furos na parede para colocar as buchas e pendurar o quadro</p>
+                <div>
+                    <h5>Pendurar quadro</h5>
+                    <p>Furar dois furos na parede para colocar as buchas e pendurar o quadro</p>
+                </div>
+                <div>
+                    <box-icon name='trash'></box-icon>
+                </div>
             </li>
             <li>
-                <h5>Comer</h5>
-                <p>Em casa</p>
+                <div>
+                    <h5>Comer</h5>
+                    <p>Em casa</p>
+                </div>
+                <div>
+                    <box-icon name='trash'></box-icon>
+                </div>
             </li>
             <li>
-                <h5>Reunião com cliente</h5>
-                <p>Ir na KF veiculos se reunir com fabricio</p>
+                <div>
+                    <h5>Reunião com cliente</h5>
+                    <p>Ir na KF veiculos se reunir com fabricio</p>
+                </div>
+                <div>
+                    <box-icon name='trash'></box-icon>
+                </div>
             </li>
             <li>
-                <h5>Estudar</h5>
-                <p>Entender melhor variaveis e constantes</p>
+                <div>
+                    <h5>Estudar</h5>
+                    <p>Entender melhor variaveis e constantes</p>
+                </div>
+                <div>
+                    <box-icon name='trash'></box-icon>
+                </div>
             </li>
             <li>
-                <h5>Comprar capacete</h5>
-                <p>Ir na loja e comprar o capacete que EU já escolhi e não ceder ao consumismo</p>
+                <div>
+                    <h5>Comprar capacete</h5>
+                    <p>Ir na loja e comprar o capacete que EU já escolhi e não ceder ao consumismo</p>
+                </div>
+                <div>
+                    <box-icon name='trash'></box-icon>
+                </div>
             </li>
         </ul>
     </main>
 
+    <div id="overlay" onclick="fecharModal()"></div>
+    <div class="modal">
+        <form id="criar">
+            <h3>Nova Tarefa <box-icon name="x"></box-icon></h3>
+            <label for="titulo">Titulo</label>
+            <input type="text" id="titulo" placeholder="Digite o titulo" required>
+            <label for="descricao">Descrição</label>
+            <textarea id="descricao"></textarea>
+            <button type="submit">Criar</button>
+        </form>
+    </div>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
